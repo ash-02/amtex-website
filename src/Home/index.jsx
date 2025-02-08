@@ -84,7 +84,6 @@ const index = () => {
       </div>
 
       <div className="feature-cards-wrapper">
-        <div className="feature-cards">
           <motion.h1
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -93,6 +92,7 @@ const index = () => {
           >
             Insights That Lead to Innovation
           </motion.h1>
+        <div className="feature-cards">
 
           <AnimatedCards />
         </div>
