@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap");
 
 .home-main {
   display: flex;
@@ -8,10 +8,11 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: white;
   color: white;
   position: relative;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%);
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%); */
 }
 
 .home-main .banner-main {
@@ -23,6 +24,7 @@
   height: 100vh;
   width: 100vw;
   color: white;
+  background-color: #060b14;
 }
 
 .banner-main img {
@@ -40,27 +42,6 @@
   width: 100vw;
   background-color: #060b14;
   color: white;
-}
-
-.banner-main video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-}
-
-.banner-main .gsap-text {
-  position: absolute;
-  z-index: 1;
-  font-size: 3rem;
-  overflow: hidden;
-  display: inline-block;
-  text-align: center;
-  padding: 0 1rem;
-  bottom: 40%;
-  font-family: "Krona One", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .cursor {
@@ -81,25 +62,195 @@
 }
 
 .Mainpage-FirstText {
-    font-size: 4rem;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    padding: 0 1rem;
-    bottom: 40%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+  font-size: 4rem;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  padding: 0 1rem;
+  bottom: 40%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  z-index: 3;
 }
 
 .MainPage-subText {
-    font-size: 1.5rem;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    padding: 0 1rem;
-    bottom: 40%;
-    font-family: "Lexend Giga", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-size: 1.5rem;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  padding: 0 1rem;
+  bottom: 40%;
+  font-family: "Lexend Giga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.glow-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.glowing-div {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 1;
+  z-index: 2;
+}
+
+.div1 {
+  background: radial-gradient(
+    circle,
+    rgba(255, 205, 100, 0.8) 20%,
+    rgba(255, 165, 50, 0.5) 70%,
+    rgba(10, 10, 20, 0)
+  );
+  top: 50px;
+  left: 100px;
+}
+
+.div2 {
+  background: radial-gradient(
+    circle,
+    rgba(195, 40, 100, 0.8) 20%,
+    rgba(155, 20, 70, 0.5) 70%,
+    rgba(10, 10, 20, 0)
+  );
+  top: 200px;
+  left: 250px;
+}
+
+.div3 {
+  background: radial-gradient(
+    circle,
+    rgba(40, 120, 200, 0.8) 20%,
+    rgba(20, 90, 160, 0.5) 70%,
+    rgba(10, 10, 20, 0)
+  );
+  top: 300px;
+  left: 50px;
+}
+
+.gradient-background {
+  position: absolute;
+  width: 100%;
+  min-height: 200vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  filter: blur(150px);
+}
+
+.feature-cards-wrapper {
+  background-color: #060b14;
+  height: 100vh;
+  width: 100vw;
+}
+
+.feature-cards {
+  background-image: url("../assets//HomePage/SVG_Bg.svg");
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.feature-cards h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cards-container {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+}
+
+.card-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.card {
+  color: white;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 21rem;
+  height: 27rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.313rem;
+  font-family: "Krona One", sans-serif;
+  height: 12%;
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+}
+
+@media (max-width: 48rem) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 100%;
+  }
 }

@@ -52,6 +52,21 @@ const items = [
       "https://plus.unsplash.com/premium_photo-1682124886753-ea98cc90c611?q=80&w=3200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Data Migration and Integration",
   },
+  {
+    image:
+      "https://plus.unsplash.com/premium_photo-1661386253258-64ab9521ce89?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Data Science and Services",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Data Analytics and Visualization",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1581090016743-0791caf50d31?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "End to End Automation",
+  },
 ];
 
 export default function Expandable({ list = items, autoPlay = true, className }: ExpandableProps) {
@@ -67,7 +82,7 @@ export default function Expandable({ list = items, autoPlay = true, className }:
       if (!isHovering) {
         setActiveItem((prev) => (prev + 1) % list.length);
       }
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [autoPlay, list.length, isHovering]);
