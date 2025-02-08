@@ -21,8 +21,6 @@ const index = () => {
           transition={{ duration: 2, ease: "easeInOut", delay: 2 }}
           className="relative w-full h-full flex justify-center items-center z-4 mt-2 overflow-hidden"
           style={{
-            // position: relative;
-            // background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%);
             position: "relative",
             background:
               "linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%)",
