@@ -197,12 +197,13 @@
 
 // export default Navbar;
 
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import amtexLogo from "../assets/amtex_logo.png";
 import "./index.css";
 
 const Navbar = () => {
+
   const [isHidden, setIsHidden] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -245,9 +246,18 @@ const Navbar = () => {
       <div className="navbar-main">
         <div className="navbar-content">
           <ul className="navbar-list">
-            <div className="logo-container">
+            {/* <div className="logo-container">
               <img src={amtexLogo} alt="Amtex Logo" />
-            </div>
+            </div> */}
+
+            <motion.div
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: isHidden ? isMobile ? 0 : -150 : 0, opacity: 1 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="logo-container"
+            >
+              <img src={amtexLogo} alt="Amtex Logo" />
+            </motion.div>
 
             {isMobile && (
               <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>

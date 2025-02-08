@@ -40,6 +40,7 @@
   width: 100vw;
   background-color: #060b14;
   color: white;
+  gap: 2rem;
 }
 
 .cursor {
@@ -294,6 +295,7 @@
 
   .services-carou h1 {
     font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
   }
 
   .feature-cards-wrapper {

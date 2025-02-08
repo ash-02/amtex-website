@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useRef} from "react";
 import BlurryBlob from "../components/background/blurry-blob";
 import "./index.css";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Typewriter from "../components/Typewriter";
 import { BlurIn } from "../components/BlurIn";
 import Expandable from "../components/expandable";
@@ -9,6 +9,18 @@ import { GlowingDivs } from "../components/GlowingDivs";
 import AnimatedCards from "../components/AnimatedCards";
 
 const index = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const sectionRef = useRef(null);
+
+  const handleScroll = () => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <div className="home-main">
       <div
@@ -51,6 +63,7 @@ const index = () => {
               initial={{ y: 25, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 2, ease: "easeInOut", delay: 2 }}
+              onClick={handleScroll}
               className="MainPage-button mt-4 px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:bg-cyan-300 transition-colors duration-300"
             >
               Get Started
@@ -58,7 +71,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className="services-carou h-screen w-full bg-gray-100 flex flex-col justify-center items-center gap-2">
+      <div ref={sectionRef} className="services-carou h-screen w-full bg-gray-100 flex flex-col justify-center items-center gap-2">
         <motion.h1
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
