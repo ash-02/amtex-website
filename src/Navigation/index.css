@@ -237,8 +237,8 @@
     flex-direction: column;
     position: absolute;
     top: 10vh;
-    left: 50%;
-    transform: translateX(-50%); /* Centers the div */
+    /* left: 50%; */
+    transform: translateX(-50%);
     width: 90%;
     border-radius: 7.5px;
     display: none;

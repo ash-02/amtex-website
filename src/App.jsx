@@ -7,6 +7,7 @@ import Home from "./Home/index.jsx";
 import Footer from "./Footer/index.jsx";
 import AboutUs from "./AboutUs/index.jsx";
 import Solutions from "./Solutions/index.jsx";
+import Letter from "./Letter/index.jsx"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         } />
         <Route path="/home" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/aboutus/letter" element={<Letter />} />
         <Route path="/solutions/:sectionTitle" element={<Solutions />} />
       </Routes>
       <Footer />
