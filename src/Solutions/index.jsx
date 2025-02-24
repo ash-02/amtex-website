@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Solutions } from "../data/solutions";
+import { Solutions } from "../data/Solutions";
 import "./index.css";
 import { GlowingDivs } from "../components/GlowingDivs";
 
