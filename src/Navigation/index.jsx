@@ -241,8 +241,8 @@ const Navbar = () => {
         },
       ],
     },
-    { title: "Consulting", path: "/services" },
-    { title: "Careers / Jobs", path: "/contact" },
+    { title: "Consulting", path: "#" },
+    { title: "Careers / Jobs", path: "#" },
   ];
 
   return (
