@@ -1,23 +1,34 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
-import Navigation from './Navigation/index.jsx'
-import Home from './Home/index.jsx'
-import Footer from './Footer/index.jsx'
-
-import TestPage from './test/TestPage.jsx'
+import Navigation from "./Navigation/index.jsx";
+import Home from "./Home/index.jsx";
+import Footer from "./Footer/index.jsx";
+import AboutUs from "./AboutUs/index.jsx";
+import Solutions from "./Solutions/index.jsx";
 
 function App() {
-
   return (
-    <div className="App
+    <Router>
+    <div
+      className="App
     flex flex-col items-start justify-start h-full w-full
-    ">
+    "
+    >
       <Navigation />
-      <Home />
+      <Routes>
+        <Route path="/" element={
+          <Navigate to="/home" replace />
+        } />
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/solutions/:sectionTitle" element={<Solutions />} />
+      </Routes>
       <Footer />
     </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

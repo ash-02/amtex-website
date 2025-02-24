@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.about-us-main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #060b14;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 12vh;
+  padding: 4rem 0;
+}
+
+.letter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: rgba( 0, 0, 0, 0.6 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 70%;
+}
+
+.letter-content {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    
+  border: none;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.letter-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.letter-header img {
+  width: 12rem;
+}
+
+@media screen and (max-width: 768px) {
+  .letter-container {
+    width: 95%;
+  }
+}

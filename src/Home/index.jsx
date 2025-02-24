@@ -1,5 +1,4 @@
 import React, {useRef} from "react";
-import BlurryBlob from "../components/background/blurry-blob";
 import "./index.css";
 import { motion, useInView } from "framer-motion";
 import Typewriter from "../components/Typewriter";

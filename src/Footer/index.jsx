@@ -99,7 +99,7 @@ import amtexLogo from "../assets/amtex_logo.png";
 
 const Footer = () => {
   return (
-    <div className="footer-all">
+    <div className="footer-all z-5">
       <div className="footer-main">
         <div className="footer-logo">
           <img src={amtexLogo} alt="Tech Solutions" />

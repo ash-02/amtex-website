@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>TeamWork</title>
+        <link rel="stylesheet" type="text/css" href="/libs/kendoui.2024.1.319/styles/material-main-dark.css" />
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/bootstrap-icons-1.8.1/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="/Enterprise/TeamWork5/assets/teamwork/styles/twKendo.css" />
+
+    <style>
+        .skip-to-main-content-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background-color: black;
+            color: white;
+            opacity: 0;
+        }
+
+        .skip-to-main-content-link:focus {
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+        }
+    </style>
+
+    
+    <link rel="stylesheet" type="text/css" href="../css/app-style.css?ver=250121&h=25021218" />
+
+</head>
+<body class="dark-mode" data-bs-theme='dark'>
+    <a href="#" class="skip-to-main-content-link">Skip to main content</a>
+    <header>
+        
+    
+
+
+
+
+
+
+<!-- Navbar -->
+<nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark d-print-none">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <strong><i class="bi bi-list"></i></strong>
+        </button>
+
+
+
+        <!-- Brand -->
+        <a href='/Enterprise/TeamWork5/v6/emp/' style="text-decoration:none" class="navbar-brand d-none d-md-block mt-0 mb-0" aria-label="Home">
+            <strong class="tw-logo-team">Team</strong><strong class="tw-logo-work">Work</strong>
+        </a>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb d-inline-flex">
+            </ol>
+        </nav>
+
+        <!-- Search form
+          <form class="d-none d-md-flex input-group w-auto my-auto">
+            <input
+              autocomplete="off"
+              type="search"
+              class="form-control rounded"
+              placeholder='Search (ctrl + "/" to focus)'
+              style="min-width: 225px;"
+            />
+            <span class="input-group-text border-0"><i class="bi bi-search"></i></span>
+          </form>
+        -->
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+
+
+
+            <li class="nav-item me-4"></li>
+
+            
+
+
+            <li>
+                <a class="nav-link  me-1 me-lg-0" href="/Enterprise/TeamWork5/v6/emp/#!calendar" title="Calendar">
+                    <i class="bi bi-calendar-week  me-1 me-lg-0"></i> <span class="hide-md">Calendar</span>
+                </a>
+            </li>
+
+
+
+
+
+            <li>
+                <a class="nav-link  me-1 me-lg-0" href="/Enterprise/TeamWork5/v6/emp/#!sch-list" title="Shifts">
+                    <i class="bi bi-person-lines-fill me-1 me-lg-0"></i> <span class="hide-md">Shifts</span>
+                </a>
+            </li>
+
+
+                <li>
+                    <a class="nav-link me-1" href=/Enterprise/TeamWork5/v6/emp/#!sch-swapboard title="SwapBoard">
+                        <i class="bi bi-signpost-2  me-1 me-lg-0"></i> <span class="hide-md">SwapBoard</span>
+                    </a>
+                </li>
+
+
+            <li>
+                <a class="nav-link me-1 me-lg-0" href=/Enterprise/TeamWork5/v6/emp/#!leave title="Leave">
+                    <i class="bi bi-calendar-x  me-1 me-lg-0"></i> <span class="hide-md">Leave</span>
+                </a>
+            </li>
+
+
+
+
+
+
+
+
+            <li class="nav-item me-3"></li>
+
+            <!-- Notification dropdown -->
+            <li class="nav-item dropdown">
+                <!-- <a class="nav-link me-2 me-lg-0 dropdown-toggle hidden-arrow"
+           href="#"
+           id="navbarDropdownMenuLink"
+           role="button"
+           data-bs-toggle="dropdown"
+           aria-expanded="false">
+            <i class="bi bi-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-success">1</span>
+        </a>-->
+                <ul class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href=/Enterprise/TeamWork5/v6/emp/#!org-messages>Messages</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href=/Enterprise/TeamWork5/v6/emp/#!org-events>Events</a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href=/Enterprise/TeamWork5/v6/emp/#!org-feedback>Feedback</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+                   href="#"
+                   id="navbarDropdownMenuLink"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <span class="d-none d-md-block me-1">Ashwin Sathiyanarayanan</span> <i class="bi bi-person-circle"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdownMenuLink">
+
+
+                    <li>
+                        <a class="dropdown-item" href=/Enterprise/TeamWork5/v6/emp/#!setup-settings><i class="bi bi-person-circle"></i> Profile</a>
+                    </li>
+                    <li>
+
+                        <a class="dropdown-item" href=/Enterprise/TeamWork5/v6/emp/#!setup-prefs><i class="bi  bi-ui-checks-grid"></i> Preferences</a>
+                    </li>
+                    <li>
+
+                        <a class="dropdown-item" href=/Enterprise/TeamWork5/v6/emp/#!setup-notify><i class="bi  bi-bell-fill"></i> Notifications</a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="toggle-dark"><i class="bi bi-moon-fill"></i> Toggle</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="KeepAlive"><i class="bi bi-arrow-repeat"></i> Keep-Alive: <span id="KeepAliveStatus"></span></a>
+                    </li>
+
+                    <li id="appLauncher" style="display:none">
+                        <a class="dropdown-item"><i class="bi bi-phone"></i> Open App</a>
+                    </li>
+
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" href="https://docs.tmwork.net/emp-guide-6/" target="_blank">Help</a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" href="/Enterprise/TeamWork5/signout">Exit</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- Sidebar -->
+<nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse dark-mode">
+
+    <div class="position-sticky">
+
+        <i id="sidebarHide" class="bi bi-arrow-left-short float-end" role="button" aria-label="Toggle menu visibility"></i>
+
+        <div class="list-group list-group-flush mx-2 mt-1">
+
+                <a href='/Enterprise/TeamWork5/v6/emp/#!start' data-path='Home' class='list-group-item py-1'>
+        <i class="bi bi-house me-2"></i><span>Home</span>
+    </a>
+
+                <a href='/Enterprise/TeamWork5/v6/emp/#!calendar' data-path='Calendar' class='list-group-item py-1'>
+        <i class="bi bi-calendar-week me-2"></i><span>Calendar</span>
+    </a>
+
+
+
+
+    <button class="list-group-item collapse-header collapsed py-1 text-left "
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTime"
+            aria-current="false"
+            aria-expanded="false"
+            aria-controls="collapseTime">
+        <i class="bi bi-chevron-right me-2 right"></i>
+        <i class="bi bi-chevron-down  me-2 down"></i>
+        <span>Time</span>
+    </button>
+<ul id="collapseTime" class="collapse sidenav-collapse">
+
+
+                    
+                        <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!time-sheet' data-path="Timesheet" class="list-group-item  sidenav-link">
+            <i class="bi bi-table me-1"></i>Timesheet
+        </a>
+    </li>
+
+
+
+                </ul>
+
+
+                <button class="list-group-item collapse-header collapsed py-1 text-left "
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSchedule"
+            aria-current="false"
+            aria-expanded="false"
+            aria-controls="collapseSchedule">
+        <i class="bi bi-chevron-right me-2 right"></i>
+        <i class="bi bi-chevron-down  me-2 down"></i>
+        <span>Schedule</span>
+    </button>
+
+        <ul id="collapseSchedule" class="collapse sidenav-collapse">
+
+                <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!sch-list' data-path="Shifts" class="list-group-item  sidenav-link">
+            <i class="bi bi-person-lines-fill me-1"></i>Shifts
+        </a>
+    </li>
+
+                <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!sch-totals' data-path="Totals" class="list-group-item  sidenav-link">
+            <i class="bi bi-calculator me-1"></i>Totals
+        </a>
+    </li>
+
+    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!sch-swapboard' data-path="SwapBoard" class="list-group-item  sidenav-link">
+            <i class="bi bi-signpost-2 me-1"></i>SwapBoard
+        </a>
+    </li>
+            
+          
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!leave' data-path="My Leave" class="list-group-item  sidenav-link">
+            <i class="bi bi-calendar-x me-1"></i>My Leave
+        </a>
+    </li>
+
+          
+        </ul>
+
+
+
+
+
+                <button class="list-group-item collapse-header collapsed py-1 text-left "
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOrg"
+            aria-current="false"
+            aria-expanded="false"
+            aria-controls="collapseOrg">
+        <i class="bi bi-chevron-right me-2 right"></i>
+        <i class="bi bi-chevron-down  me-2 down"></i>
+        <span>Organization</span>
+    </button>
+
+
+            <ul id="collapseOrg" class="collapse sidenav-collapse">
+
+
+
+
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!org-messages' data-path="Messages" class="list-group-item  sidenav-link">
+            <i class="bi bi-bell me-1"></i>Messages
+        </a>
+    </li>
+
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!org-events' data-path="Events" class="list-group-item  sidenav-link">
+            <i class="bi bi-calendar-event me-1"></i>Events
+        </a>
+    </li>
+
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!org-feedback' data-path="Feedback" class="list-group-item  sidenav-link">
+            <i class="bi bi-clipboard2-check me-1"></i>Feedback
+        </a>
+    </li>
+
+
+            </ul>
+
+
+                <button class="list-group-item collapse-header collapsed py-1 text-left "
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSetup"
+            aria-current="false"
+            aria-expanded="false"
+            aria-controls="collapseSetup">
+        <i class="bi bi-chevron-right me-2 right"></i>
+        <i class="bi bi-chevron-down  me-2 down"></i>
+        <span>Setup</span>
+    </button>
+
+
+            <ul id="collapseSetup" class="collapse sidenav-collapse">
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!setup-settings' data-path="Profile" class="list-group-item  sidenav-link">
+            <i class="bi bi-person-circle me-1"></i>Profile
+        </a>
+    </li>
+
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!setup-prefs' data-path="Preferences" class="list-group-item  sidenav-link">
+            <i class="bi bi-ui-checks-grid me-1"></i>Preferences
+        </a>
+    </li>
+
+                    <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!setup-notify' data-path="Notifications" class="list-group-item  sidenav-link">
+            <i class="bi bi-bell-fill me-1"></i>Notifications
+        </a>
+    </li>
+
+
+
+                <li class="sidenav-item">
+                        <button class="list-group-item collapse-header collapsed py-1 text-left ms-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseAvailability"
+            aria-current="false"
+            aria-expanded="false"
+            aria-controls="collapseAvailability">
+        <i class="bi bi-chevron-right me-2 right"></i>
+        <i class="bi bi-chevron-down  me-2 down"></i>
+        <span>Availability</span>
+    </button>
+
+                    <ul id="collapseAvailability" class="collapse sidenav-collapse">
+                            <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!avail-cal' data-path="Availability" class="list-group-item  sidenav-link">
+            <i class="bi bi-calendar me-1"></i>Calendar
+        </a>
+    </li>
+
+                            <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!avail-templates' data-path="Templates" class="list-group-item  sidenav-link">
+            <i class="bi bi-calendar-range me-1"></i>Templates
+        </a>
+    </li>
+
+                            <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!avail-overrides' data-path="Overrides" class="list-group-item  sidenav-link">
+            <i class="bi bi-calendar-event me-1"></i>Overrides
+        </a>
+    </li>
+
+                            <li class="sidenav-item">
+        <a href='/Enterprise/TeamWork5/v6/emp/#!volunteer' data-path="Volunteer" class="list-group-item  sidenav-link">
+            <i class="bi bi-telephone me-1"></i>Volunteer
+        </a>
+    </li>
+
+
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+    </header>
+
+    <!-- PAGE BODY -->
+    <main style="margin-top: 3em; padding-bottom: 3em">
+        <div class="container-fluid">
+            
+<div id="viewContainer"></div>
+<span id="popupNotification" role="alert"></span>
+
+
+
+
+        </div>
+    </main>
+
+    <!-- LIBRARIES -->
+    <script src="/libs/jquery/jquery-3.7.1.min.js"></script>
+    <script src="/libs/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="/libs/kendoui.2024.1.319/js/kendo.all.min.js"></script> <!-- kendo.custom.min.js -->
+    <script src="/Enterprise/TeamWork5/V6/js/classes.js"></script>
+    <script src="/Enterprise/TeamWork5/assets/teamwork/GLOBALS.js?ver=250121"></script>
+    <script src="/libs/anchorme.min.js"></script>
+
+            <script src="/libs/kendoui.2024.1.319/js/cultures/kendo.culture.en-US.min.js"></script>
+            <script src="/libs/kendoui.2024.1.319/js/messages/kendo.messages.en-US.min.js"></script>
+            <script>
+                kendo.culture('en-US');
+            </script>
+
+
+
+    <script>
+        var APP = window.APP || {};
+
+        APP.Root = "/Enterprise/TeamWork5/";
+        APP.Version = "250121";
+        APP.RequireUrlArgs = "bust=v250121";
+
+        APP.ErrorAlert = APP.Root + "Views/ErrorAlert";
+        APP.PortalKey = "emp";
+        APP.TimeFormat = "t";
+        APP.DateFormat = "d";
+
+APP.TimeFormat = "h:mm tt";
+APP.DateFormat = "M/d/yyyy";
+APP.UtcOffsetMinutes = -300;
+APP.FirstDay = 0;
+APP.TimeGeo = true;
+APP.Token = '3343ae79-62de-4e13-85fd-68626c5ee5f2';
+
+        $(".skip-to-main-content-link").on("click", SkipTo);
+
+        function SkipTo(e) {
+            e.preventDefault();
+
+            var v = $('#viewContainer');
+            if (v.length > 0) {
+                var ts = v.find('a[href], area[href], input, select, textarea, button, *[tabindex], *[contenteditable]').not('[tabindex=-1], [disabled], :hidden');
+                //console.log(ts);
+                if (ts.length > 0) {
+                    ts[0].focus();
+                }
+                
+            }
+            $(".skip-to-main-content-link").blur();
+        };
+
+    </script>
+
+    
+    
+
+<!-- Employee Schedule Actions -->
+<script type="text/html" id="shift-actions-template">
+    <div>
+        # if (!IsEnabled) { #
+        <span class="badge bg-warning">Inactive</span>
+        # }
+        else {
+        if (IsApproved) { #
+        <span class="badge bg-success" title="Shift has been approved">OK</span>
+        # }
+        if (ShowApproveLink) { #
+        <button class="btn btn-sm btn-warning btnApprove" data-id="#=Id#" data-bind="click:ShowApprove" title="Approve Shift">
+            OK?
+        </button>
+        # }
+        if (CanSwap) {
+        if (ShowSwapLink) { #
+        <button class="btn btn-sm btn-light btnSwap" data-id="#=Id#" data-bind="click:ShowPost" title="Place Shift on the Swap Board">
+            Swap
+        </button>
+        # }
+        if (ShowTradeLink) { #
+        <button id="btnMyTrade" class="btn btn-sm btn-info"  data-id="#=Id#" data-bind="click:ShowMyTrade" title="View Trade">
+            Trade
+        </button>
+        # }
+        if (ShowOfferLink) { #
+        <button id="btnOffer" class="btn btn-sm btn-info"  data-id="#=Id#" data-bind="click:ShowOffer" title="View Offer">
+            Offer
+        </button>
+        # }
+        if (ShowReclaimLink) { #
+        <button class="btn btn-sm btn-warning btnReclaim"  data-id="#=Id#" data-bind="click:ShowReclaim" title="Remove shift from the Swap Board">
+            Reclaim
+        </button>
+        # }
+
+
+        }
+
+
+        if (ShowSplitLink) { #
+        <button class="btn btn-sm btn-light btnSplit"  data-id="#=Id#" data-bind="click:ShowSplit" title="Split">
+            -/- Split
+        </button>
+        # }
+
+        if (ShowMergeLink) { #
+        <button class="btn btn-sm btn-light btnMerge"  data-id="#=Id#" data-bind="click:ShowMerge" title="Merge with previous back-to-back shift">
+            &gt;&lt; Merge
+        </button>
+        # }
+
+
+        } #
+
+        #if(Id>0) {#
+        <button class="btn btn-sm btn-light btnOpen" data-id="#=Id#" title="Open" data-bind="click:OpenShift">
+            Open
+        </button>
+        #}#
+    </div>
+</script>
+
+<!-- Swapboard Actions -->
+<script type="text/html" id="swapboard-actions-template">
+    <div>
+        # if (CanSwap) {
+        if (BidBoardId !== null) {
+        if (BidBoardStatus !== null) {
+        if (BidBoardStatus === 1) { #
+        <button  class="btn btn-sm btn-dark btnBid"  style="text-decoration:line-through" data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowBid" title="Active Bid on this shift">
+            Bid
+        </button>
+        # }
+        else { #
+        <button class="btn btn-sm btn-warning btnBid"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowBid" title="Bid for this shift">
+            Active Bid
+        </button>
+        # }
+        }
+        else { #
+        <button  class="btn btn-sm btn-info btnBid"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowBid" title="Active Bid on this shift">
+            Bid
+        </button>
+        # }
+        }
+        else { #
+        <!-- Need to check both b/c of use in calendar -->
+        # if ((typeof DataType !== 'undefined'  && DataType > 9) || (typeof dataType !== 'undefined' && dataType > 9)) { #    <!-- Trading -->
+        <button class="btn btn-sm btn-primary btnTrade"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowTrade" title="View the trade">
+            Check Trade
+        </button>
+        # }
+        else { #
+        # if (ToMe) { #
+        <button class="btn btn-sm btn-primary btnClaim"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowClaim" title="Check if you can claim shift from Swap Board">
+            Claim
+        </button>
+        # }
+        else { #
+        <button class="btn btn-sm btn-primary btnClaim"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowClaim" title="Check if you can claim shift from Swap Board">
+            Check
+        </button>
+        # }
+        }
+        }
+        }
+        else { #
+        # if (IsMe) { #
+        <!-- Need to check both b/c of use in calendar -->
+        #  if ((typeof DataType !== 'undefined' && DataType > 9) || (typeof dataType !== 'undefined' && dataType > 9)) { #    <!-- Trading -->
+        <button class="btn btn-sm btn-info btnMyTrade"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowMyTrade" title="View my trade">
+            My Trade
+        </button>
+        # }
+        else { #
+        <button class="btn btn-sm btn-warning btnReclaim"  data-id="#=Id#" data-bid="#=LocId#" data-cs="#=CheckSum#" data-bind="click:ShowReclaim" title="Remove shift from the Swap Board">
+            Reclaim
+        </button>
+        # }
+        }
+        }
+        if (SwapText !== null) { #
+        #=SwapText #
+        # } #
+    </div>
+</script>
+
+<!-- Break Time  -->
+<script type="text/html" id="breakTimes-detail-template">
+    # if (BreakStart != null && BreakEnd != null) { #
+    #= kendo.toString(kendo.parseDate(BreakStart), 'h:mm tt') # - #= kendo.toString(kendo.parseDate(BreakEnd), 'h:mm tt') #
+    # } #
+</script>
+
+<script type="text/html" id="breakTimes-header-template">
+    # if (value != null) { #
+    Break: #= kendo.toString(kendo.parseDate(value), 'h:mm tt') #
+    # } #
+</script>
+
+<script type="text/html" id="claimShift-group-template">
+    <span style='font-style:italic'>#= value #</span>
+</script>
+
+<script type="text/html" id="claimShift-checks-template">
+    <span>
+        # if (Passed) { #
+        Yes
+        # }
+        else { #
+        <span class="text-darkred">No</span>
+        # } #
+    </span>
+</script>
+
+<script type="text/html" id="swapFor-info-template">
+    <span>
+        # if (data.Date) {#
+        #=kendo.toString(kendo.parseDate(data.Date), "ddd")#
+        #=kendo.toString(kendo.parseDate(data.Date), "d")#
+        [#=kendo.toString(kendo.parseDate(data.Start), 'h:mm tt') #-#=kendo.toString(kendo.parseDate(data.End), 'h:mm tt')#],
+        #=kendo.toString(data.Hours, "0.00")#,
+        #if (data.LocName) {#
+        #=data.LocName#,
+        # }
+        if (data.StnName) {#
+        #=data.StnName#
+        # }#
+        #}
+        else {#
+            <span>Select Specific Shift </span>
+        #}#
+    </span>
+</script>
+
+<script type="text/html" id="tradeShift-info-template">
+    <span>
+        # if (data.Date) {
+        if (data.LocName) {#
+        #=data.LocName#,
+        # }
+        if (data.StnName) {#
+        #=data.StnName#,
+        # }#
+        #=kendo.toString(kendo.parseDate(data.Date), "ddd")#
+        #=kendo.toString(kendo.parseDate(data.Date), "M/d/yyyy")#
+        [#=kendo.toString(kendo.parseDate(data.Start), "h:mm tt")# -
+        #=kendo.toString(kendo.parseDate(data.End), "h:mm tt")#],
+        #=kendo.toString(data.Hours, "0.00")#
+        #}#
+    </span>
+</script>
+
+<script type="text/html" id="date-info-template">
+    <span>
+        #=kendo.toString(kendo.parseDate(data), "ddd")#
+        #=kendo.toString(kendo.parseDate(data), "M/d/yyyy")#
+        #=kendo.toString(kendo.parseDate(data), "h:mm tt")#
+    </span>
+</script>
+
+<script type="text/html" id="tradeShift-details-template">
+    <div>
+        <strong>
+            #= kendo.render(kendo.template($.trim($("\\#tradeShift-info-template").html())), [data]) #
+        </strong>
+
+        <table>
+            <tr>
+                <td>By:</td>
+                <td><span data-bind="text: EmpName"></span></td>
+            </tr>
+            <tr data-bind="visible: ShowTradeNote">
+                <td>Notes:</td>
+                <td><span data-bind="text: TradeNote"></span></td>
+            </tr>
+            <!--<tr>
+                <td>Priority:</td>
+                <td> <span data-bind="text: Priority"></span></td>
+            </tr>-->
+            <tr>
+                <td>Created:</td>
+                <td><span>#= kendo.render(kendo.template($.trim($("\\#date-info-template").html())), [data.Deadline]) #</span></td>
+            </tr>
+            <tr>
+                <td>Status:</td>
+                <td><span data-bind="text: TradeStatus"></span></td>
+            </tr>
+        </table>
+    </div>
+
+</script>
+
+<script type="text/html" id="empLocs-template">
+    # if (data.Id) {
+    if (!data.Enabled) { #
+    <span class="disabledItem" title="Feature not available">#=data.Value #</span>
+    # }
+    else { #
+    #=data.Value #
+    # }
+    } #
+</script>
+
+<!-- Employee Event Templates -->
+<script id="event-status-template" type="text/html">
+    <div>
+        #if(data.Status) {#
+        <div>
+            #if(data.Status === -2000) {#
+            <span class="badge bg-dark">Void</span>
+            #}#
+
+            #if(data.Status === -1000) {#
+            <span class="badge bg-dark">Cancelled</span>
+            #}#
+
+            #if(data.Status < 0 && data.Status > -1000) {#
+            <span class="badge bg-warning">On Hold</span>
+            #}#
+
+            #if(data.Status > 0 && data.Status < 1000) {#
+            <span class="badge bg-info">In Progress</span>
+            #}#
+
+            #if(data.Status >= 1000) {#
+            #if(data.Status == 2000){#
+            <span class="badge bg-primary">[Status-Paid]</span>
+            #} else {#
+            <span class="badge bg-primary">Complete</span>
+            #}#
+            #}#
+
+            #if(data.ClientConfirmed === 1) {#
+            <span class="badge bg-success">Confirmed</span>
+            #} else if(data.ClientConfirmed === -1) {#
+            <span class="badge bg-danger">Not Confirmed</span>
+            #}#
+        </div>
+        # } #
+
+        #if (EmployeeStatus === 1) {#
+        <span>Timer Running...</span>
+        #}#
+    </div>
+</script>
+
+<script type="text/html" id="event-actions-template">
+    <div>
+        # if (ShowSwap) { #
+        <button id="btnComplete" class="btn btn-sm btn-primary" data-id="#=EventId#" data-bind="click:ClaimEvent">
+            Claim
+        </button>
+        # } else if (CanEnterTime) { #
+
+        # if (EmployeeStatus === -1) { #
+        <span class="badge bg-warning">Other</span>
+        # }#
+        # if (EmployeeStatus === null || EmployeeStatus <= 0) { #
+        <button id="btnStart" class="btn btn-sm btn-info" data-id="#=EventId#" data-bind="click:StartEvent" title="Timer: Start">
+            <i class="bi bi-play"></i>
+        </button>
+        # } else if (EmployeeStatus === 1) { #
+        <button id="btnEnd" class="btn btn-sm btn-warning" data-id="#=EventId#" data-bind="click:EndEvent" title="Timer: End">
+            <i class="bi bi-stop"></i>
+        </button>
+        # }#
+
+        <button id="btnComplete" class="btn btn-sm btn-primary" data-id="#=EventId#" data-bind="click:CompleteEvent" title="Complete">
+            <i class="bi bi-check-lg"></i>
+        </button>
+        # }#
+
+        <button id="btnOpen" class="btn btn-sm btn-light" data-id="#=EventId#" data-bind="click:OpenEvent">
+            Open
+        </button>
+
+
+    </div>
+</script>
+
+<script id="other-actions-template" type="text/html">
+
+</script>
+
+<script id="event-check-row-conditional-template" type="text/html">
+    # if (Status < 1000) { #
+    <span class="bi bi-square col-chk"></span>
+    #}#
+</script>
+
+<script id="check-row-header-template" type="text/html">
+    <span class="bi bi-square header-chk"></span>
+</script>
+
+
+<script type="text/html" id="col-credname">
+    <div>
+        <a data-bind="click:Open" class="linky" href="\#">#: CredentialName #</a>
+    </div>
+</script>
+
+<script type="text/html" id="col-iscomplete">
+    <div>
+
+        #if(Status == "pending") {#
+        <span class='bi bi-square'></span> Pending
+        #}#
+        #if(Status == "valid") {#
+        <span class='bi bi-check-square'></span> OK
+        #}#
+        #if(Status == "reject") {#
+        <span class='bi bi-x-circle' style="color:orangered"></span> Rejected
+        #}#
+
+
+        #if(OrgApproved != null) {#
+        <span class="badge bg-info">Approved</span>
+        #}#
+
+        #if(EmpAdded) {#
+        <span class='bi bi-user float-end' style="color:lightgray"></span>
+        #}#
+
+        #if(EffectiveEnd != null && EffectiveEnd.toISODate() < '2025-02-12') {#
+        <span class="badge bg-dark float-end">Expired</span>
+        #}#
+
+
+    </div>
+</script>
+
+
+<script type="text/html" id="col-attach">
+    <div>
+        #if(AttachementCount > 0) {#
+        <a data-bind="click:Open" class="linky" href="\#" aria-label="Open File" role="button"><span class="badge" style="background-color:mediumpurple">#: AttachementCount #</span></a>
+        #}#
+
+        # if (OrgApproved== null && EmpAdded == true) { #
+        <a data-bind="click:Attach" class="linky float-end me-2" href="\#" aria-label="Upload File" role="button"><i class="bi bi-cloud-upload"></i></a>
+        #}#
+    </div>
+</script>
+
+
+<script type="text/html" id="swapboard-calendar-template">
+    <div>
+        # if (data.dates.length > 0) { 
+        var foundDay = data.dates.specialDay(+data.date)
+        if (foundDay) { #
+        <div class="calDay">
+            #= data.value #
+
+            <div style="white-space:nowrap;">
+                &nbsp;
+                #if (foundDay.SwapToYou) {#
+                <span style="color:red; font-weight: bold;" title="Directed to you!">!</span>
+                #}#
+                #if (foundDay.ShiftCount > 0) {#
+                <span class="shiftCount">#= foundDay.ShiftCount #</span>
+                #}#
+                #if (foundDay.SwapCount > 0) {#
+                <span class="swapCount">#= foundDay.SwapCount #</span>
+                #}#
+
+                #if (foundDay.LeaveCount > 0) {#
+                <span class="leaveDay">OFF</span>
+                #}#
+                #if (foundDay.PartialLeaveCount > 0) {#
+                <span class="partialLeaveDay">Off</span>
+                #}#
+            </div>
+        </div>
+        # }
+        else { #
+        <div class="calDay">#= data.value # <br>   &nbsp;</div>
+        # }
+        }
+        else {#
+        #= data.value #
+        #}#
+    </div>
+</script>
+    
+<script type="text/html" id="time-issues">
+    <span class="bg-warning">#=Title#</span>
+</script>
+<script type="text/html" id="time-messages">
+    <li class="bg-warning">#=Text#</li>
+</script>
+
+<script type="text/html" id="schon-template">
+    <div>
+        # if (Start !== null) { #
+        <a class="linky" data-start="#= kendo.toString(kendo.parseDate(Start), 'HH:mm') #" data-bind="click:ChangeStart">
+            #= kendo.toString(kendo.parseDate(Start), 'h:mm tt') #
+        </a>
+        # } #
+    </div>
+</script>
+
+<script type="text/html" id="schoff-template">
+    <div>
+        # if (End !== null) { #
+        <a class="linky"  data-end="#= kendo.toString(kendo.parseDate(End), 'HH:mm') #" data-bind="click:ChangeEnd">
+            #= kendo.toString(kendo.parseDate(End), 'h:mm tt') #
+        </a>
+        # } #
+    </div>
+</script>
+
+
+            
+
+<script type="module">
+        import * as PubSub from '../js/pubsub.js';
+        import * as Pages from '../js/pages.js';
+        import * as AppData from '../js/app-data.js';
+        import * as AppSession from '../js/app-session.js';
+
+        kendo.culture().calendar.firstDay = 0;
+
+        var urlVER = '250121';
+
+        let viewLayout = new kendo.Layout("<div id='viewLayout'></div>");
+        viewLayout.render("#viewContainer");
+
+        var missingModel = kendo.observable({ hash: null, message: null });
+        var missingView = new kendo.View("<div style='margin:64px'><br><h4><span data-bind='text:hash'></span></h4><span class='badge bg-warning' data-bind='text:message'></span></div>", { model: missingModel });
+
+        var blankView = new kendo.View("<div style='margin:64px'><br><h4>Loading...</h4></div>", { model: missingModel });
+
+        viewLayout.showIn("#viewLayout", blankView);
+
+        var myLandingPage = "#!start";
+
+
+        function routeChanged(e) {
+            var hash = window.location.hash;
+
+            if (!hash || hash == "") { hash = myLandingPage; }
+
+            var q = hash.indexOf('?');
+            var qParams = null;
+
+            if (q > -1) {
+                var qs = hash.substring(q + 1, hash.length);
+                hash = hash.substring(0, q);
+                qParams = new URLSearchParams(qs);
+            } else {
+                if (history.pushState) { history.pushState(null, null, hash); } else { location.hash = hash; }
+            };
+
+            updateNav(hash);
+            loadPage(hash, qParams);
+           // e.preventDefault();
+        };
+
+        async function loadPage(hash, qParams) {
+
+            var name = hash.replace("#!", "");
+            var file = "/" + name + ".js?ver=" + urlVER;
+
+            //viewLayout.showIn("#viewLayout", blankView);
+
+            return Pages.Open(file).then(function (page) {
+
+                if (page) {
+
+                    viewLayout.showIn("#viewLayout", page.view);
+
+                    if (page.Initialize) {
+                        page.Initialize(qParams);
+                        //console.log("initialized page");
+                    }
+
+                    if (page.vm && page.vm.Refresh) {
+                        page.vm.Refresh();
+                        //console.log("refreshed page");
+                    }
+
+                    window.scrollTo(0, 1);
+                    window.scrollTo(0, 0);
+
+                } else {
+                    //console.log("no page");
+                   // console.log(Pages.LastError);
+                    //Something went wrong
+                    missingModel.set("hash", name);
+                    missingModel.set("message", Pages.LastError);
+                    viewLayout.showIn("#viewLayout", missingView);
+                }
+
+            }
+            ).catch(function (err) {
+                console.log(err);
+            });
+        };
+
+        function updateNav(hash) {
+
+            $("a").removeClass("active");
+            $("a").removeAttr("aria-current");
+            var q = hash.indexOf('?');
+            if (q > -1) {
+                hash = hash.substring(0, q);
+            };
+
+            var tag = $('#sidebarMenu a[href$="' + hash + '"]');
+            if (tag) {
+                updateTrail(tag.data('path'));
+                tag.addClass("active");
+                tag.attr("aria-current", "page");
+                tag.parents("ul.sidenav-collapse").addClass("show");  //expand all
+                $("#sidebarMenu").removeClass("show");  //hide on mobile
+            };
+        };
+
+        function updateTrail(path) {
+
+            $("ol.breadcrumb").empty();
+
+            if (path) {
+                var segments = path.split('/');
+
+                for (var x = 0; x < segments.length; x++) {
+                    $("ol.breadcrumb").append("<li class='breadcrumb-item'><h1 class='nav'>" + segments[x] + "</h1></li>");
+                }
+
+                document.title = path;
+            };
+
+
+        };
+
+        let router = new kendo.Router({
+            change: function (e) {
+                routeChanged(e);
+            },
+            hashBang: true
+        });
+
+
+
+        //ALERTS:
+
+    var popupNotification = $("#popupNotification").kendoNotification().data("kendoNotification");
+
+        function alertItem(item) {
+
+            var msg = item.Message;
+            var type = "info";
+            if (item.Type) {
+                type = item.Type.toLowerCase();
+            }
+
+            if (type == "error" && item.Error != null) {
+
+                msg = item.Error.responseText;
+
+                if (item.Error.message != null && item.Error.message != "") { msg = item.Error.message; }
+
+                else if (item.Error.responseJSON) {
+                    msg = item.Error.responseJSON.Message;
+                }
+
+                if (item.Error.status && item.Error.status == 404) {
+                    msg = item.Error.statusText;
+                }
+            };
+
+            popupNotification.show(msg, type);
+
+        };
+
+        PubSub.Subscribe("Alert", alertItem);
+
+
+
+        var expanded = true;
+        $("#sidebarHide").click(function () {
+            //console.log("sidebarHide");
+
+            if (expanded) {
+                $("main").addClass("sidebar-hidden");
+                $("#sidebarMenu").addClass("sidebar-hidden");
+
+                $(".navbar-toggler").addClass("show");
+                $(".navbar-toggler").addClass("collapsed");
+
+                $("#sidebarHide").removeClass("bi-arrow-left-short");
+                $("#sidebarHide").addClass("bi-arrow-right-short");
+            } else {
+                $("main").removeClass("sidebar-hidden");
+                $("#sidebarMenu").removeClass("sidebar-hidden");
+
+                $(".navbar-toggler").removeClass("show");
+                $(".navbar-toggler").removeClass("collapsed");
+
+                $("#sidebarHide").removeClass("bi-arrow-right-short");
+                $("#sidebarHide").addClass("bi-arrow-left-short");
+            };
+
+            expanded = !expanded;
+        });
+
+        $(document).on('click', function (e) {
+
+            if ($(e.target).closest("#sidebarMenu").length === 0 &&
+                $(e.target).closest("#main-navbar").length === 0 &&
+                $(e.target).closest(".navbar-toggler").length === 0) {
+                $(e.target).closest(".navbar-toggler").addClass("collapsed");
+            };
+        });
+
+
+    // ==============REMEMBER OPEN MENU SECTIONS ==============
+    $('#sidebarMenu ul').on('hidden.bs.collapse', function (e) {
+
+        saveCollapseMenu();
+    });
+
+    $("#sidebarMenu ul").on('shown.bs.collapse', function (e) {
+
+        saveCollapseMenu();
+    });
+
+    function saveCollapseMenu() {
+        var open = ',';
+        $(".sidenav-collapse.show").each(function () {
+            open += this.id + ',';
+        });
+
+        APP_LOCALSTORAGE.Set("MenuShown", open);
+    };
+
+    var openItems = APP_LOCALSTORAGE.Get("MenuShown", "");
+    if (openItems != null) {
+        $("#sidebarMenu .sidenav-collapse").each(function () {
+            if (openItems.indexOf(this.id) > 0) {
+                $(this).addClass("show");
+                var btn = $("button[data-bs-target='#" + this.id + "']");
+                btn.removeClass("collapsed");
+                btn.attr("aria-expanded", "true");
+            }
+        });
+    };
+
+    // ============================
+
+        if (kendo && kendo.support.mobileOS && true) {
+            $('#appLauncher').css("display", "inline");
+
+            $('#appLauncher').off('click').on('click', function (e) {
+                 window.location = "ssi-tw-emp://SingleSignOn/25021300463700.6f0ee67003cf4004b8ca9119da7a7baf/3343ae79-62de-4e13-85fd-68626c5ee5f2/TW";
+                setTimeout(function () { window.open("/Enterprise/TeamWork5/MobileApp.cshtml", '_blank'); }, 1000);
+             });
+        }
+
+        AppData.Ajax("GET", APP.Root + "api/employee/preferences").then(function (prefs) {
+
+            AppSession.Init("MyCalendar", "view", prefs.CalendarView);
+            AppSession.Init("MyCalendar", "ShowScheduled", prefs.ShowScheduleOnCalendar);
+            AppSession.Init("MyCalendar", "ShowTime", prefs.ShowTimeOnCalendar);
+            AppSession.Init("MyCalendar", "ShowSwap", prefs.ShowSwapCountOnCalendar);
+            AppSession.Init("MyCalendar", "ShowLeave", prefs.ShowDaysOffOnCalendar);
+            AppSession.Init("MyCalendar", "ShowAvail", prefs.ShowAvailabilityOnCalendar);
+            AppSession.Init("MyCalendar", "ShowEvents", prefs.ShowEventsOnCalendar);
+            AppSession.Init("MyCalendar", "showWorkHours", !prefs.ShowCalendarFullTime);
+            AppSession.Init("MyCalendar", "workStartTime", prefs.StartTime);
+            AppSession.Init("MyCalendar", "workEndTime", prefs.EndTime);
+     
+
+        }).catch(function (err) {
+            PubSub.Publish("Alert", { Error: err, Type: "Error" });
+        }).finally(function () {
+
+            router.start();
+        });
+
+
+
+    var UpdateKeepAliveMenu = function () {
+        var isOn = (AppSession.Get("APP", "KEEPALIVE", null) != null);
+        $("#KeepAliveStatus").text((isOn ? "ON" : "OFF"));
+    };
+
+    $('#KeepAlive').off('click').on('click', function (e) {
+
+        var isOn = (AppSession.Get("APP", "KEEPALIVE", null) != null);
+
+        if (isOn) {
+            APP.StopKeepAlive();
+        } else {
+            //ping now
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open('GET', APP.Root + "shared/ping");
+            httpRequest.send(null);
+            //then start interval
+            APP.StartKeepAlive();
+        }
+
+        UpdateKeepAliveMenu();
+    });
+
+
+    if ((AppSession.Get("APP", "KEEPALIVE", null) != null)) {
+        APP.StartKeepAlive();
+    };
+
+    UpdateKeepAliveMenu();
+
+
+</script>
+
+
+</body>
+</html>
