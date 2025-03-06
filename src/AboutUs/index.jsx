@@ -3,6 +3,7 @@ import { delay, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import "./index.css";
 import { GlowingDivs } from "../components/GlowingDivs";
+import { useRouter } from "next/router";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 40 },
@@ -12,6 +13,19 @@ const fadeIn = {
 const index = () => {
   const carouselRef = useRef(null);
   const [isMobile, setIsMobile] = React.useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      router.prefetch(url);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router]);
 
   useEffect(() => {
     const scroll = () => {
