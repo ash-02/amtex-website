@@ -212,17 +212,17 @@ const index = () => {
         <br />
         <br />
         <br />
-        {/* Why Choose Us - Smooth Infinite Scroll Carousel */}
+        {/* Why Choose Us */}
         <motion.div variants={fadeIn} initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} className="mt-16 text-center z-3">
-          <h3 className="text-3xl sm:text-4xl font-semibold text-white">
+        viewport={{ once: true, amount: 0.2 }} className="mt-16 text-center">
+          <h3 className="text-3xl sm:text-4xl font-semibold text-white z-5">
             Why Choose Us?
           </h3>
           <br />
           <div
             ref={carouselRef}
-            className="relative flex space-x-6 mt-8 px-4 pb-4 overflow-hidden"
+            className="relative flex space-x-6 mt-8 px-4 pb-4 overflow-hidden z-3"
             style={{ whiteSpace: "nowrap", display: "flex" }}
           >
             {[
@@ -237,7 +237,7 @@ const index = () => {
                 key={index}
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
-                className="relative flex-shrink-0 w-[250px] sm:w-[300px] p-6 sm:p-8 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 shadow-lg text-center"
+                className="relative flex-shrink-0 w-[250px] sm:w-[300px] p-6 sm:p-8 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 shadow-lg text-center z-3"
               >
                 <h4 className="text-lg sm:text-xl font-medium text-white">
                   {item}
@@ -272,7 +272,7 @@ const index = () => {
         {/* Our Values - Vertical Animated Timeline */}
         <motion.div 
         variants={fadeIn} 
-        className="mt-16 md:px-0 px-8"
+        className="mt-16 md:px-0 px-8 z-3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
