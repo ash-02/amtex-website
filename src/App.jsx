@@ -8,6 +8,7 @@ import Footer from "./Footer/index.jsx";
 import AboutUs from "./AboutUs/index.jsx";
 import Solutions from "./Solutions/index.jsx";
 import Letter from "./Letter/index.jsx"
+import ContactUs from "./ContactUs/index.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/aboutus/letter" element={<Letter />} />
         <Route path="/solutions/:sectionTitle" element={<Solutions />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
       <Footer />
     </div>
