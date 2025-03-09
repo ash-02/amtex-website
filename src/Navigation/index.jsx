@@ -331,7 +331,7 @@ const Navbar = () => {
               ))}
             </motion.ul>
             <div className="extra-buttons">
-              <a href="">
+              <a href="/contactus">
                 <button className="contact-button">Contact Us</button>
               </a>
             </div>
