@@ -41,7 +41,7 @@ const index = () => {
   return (
     <>
       <div
-        className="gradient-background absolute left-0 w-full h-screen z-4 overflow-hidden opacity-50"
+        className="gradient-background absolute left-0 w-full h-screen z-4 overflow-hidden"
         style={{ height: "300vh", minHeight: "300vh", top: "-40%" }}
       >
         <motion.div

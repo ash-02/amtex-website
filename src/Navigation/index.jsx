@@ -222,7 +222,9 @@ const Navbar = () => {
           title: "Database Architecture",
           path: "/solutions/database-architecture",
         },
-        { title: "Data Warehouse", path: "/solutions/data-warehouse" },
+        { title: "Data Warehouse",
+          path: "/solutions/data-warehouse"
+        },
         {
           title: "Data Migration & Integration",
           path: "/solutions/data-migration-&-integration",
@@ -241,8 +243,9 @@ const Navbar = () => {
         },
       ],
     },
-    { title: "Consulting", path: "#" },
+    // { title: "Consulting", path: "#" },
     { title: "Careers / Jobs", path: "#" },
+    { title: "Contact Us", path: "/contactus" },
   ];
 
   return (
@@ -261,7 +264,9 @@ const Navbar = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="logo-container"
             >
-              <img src={amtexLogo} alt="Amtex Logo" />
+              <a href="/home">
+                <img src={amtexLogo} alt="Amtex Logo" />
+              </a>
             </motion.div>
 
             {isMobile && (
@@ -284,7 +289,9 @@ const Navbar = () => {
                 isMobile ? (isMenuOpen ? "mobile-nav open" : "mobile-nav") : ""
               }`}
             >
-              {navLinks.map((link, index) => (
+              {navLinks
+              .filter((link) => isMobile || link.title !== "Contact Us")
+              .map((link, index) => (
                 <li
                   key={index}
                   className={`nav-item relative ${isMobile ? "w-full" : ""}`}
