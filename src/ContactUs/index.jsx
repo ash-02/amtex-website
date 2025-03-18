@@ -354,19 +354,16 @@ const ContactUs = () => {
           <GoogleMapComponent />
         </div>
 
-        {/* Address Card */}
         <motion.div
           className="address-container"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
         >
-          {/* Stamp Image (Constrained to prevent overflow) */}
           <motion.div className="address-stamp-container">
             <img src={Stamp} alt="Stamp" className="address-stamp" />
           </motion.div>
 
-          {/* Address Details */}
           <motion.div className="address-content">
             <h3 className="office-title">USA Office</h3>
             <p>
@@ -387,10 +384,8 @@ const ContactUs = () => {
         </motion.div>
       </div>
 
-      {/* Contact Form */}
       <motion.div className="contact-container">
         <motion.div initial="hidden" animate="visible" variants={fadeIn} className="contact-content">
-          {/* Left Section - Title & Subtitle */}
           <div className="contact-left">
             <h1 className="contact-title">Let's <br /> Connect</h1>
             <p className="contact-subtitle">
@@ -398,7 +393,6 @@ const ContactUs = () => {
             </p>
           </div>
 
-          {/* Right Section - Contact Form */}
           <div className="contact-right">
             <form className="contact-form">
               <input type="text" name="name" placeholder="Name" required />
@@ -406,13 +400,6 @@ const ContactUs = () => {
               <input type="text" name="company" placeholder="Company" />
               <textarea name="message" placeholder="Message" required></textarea>
 
-              {/* Newsletter Checkbox */}
-              <div className="newsletter">
-                <input type="checkbox" name="newsletter" />
-                <label>Subscribe to our newsletter for marketing insights</label>
-              </div>
-
-              {/* Submit Button */}
               <motion.button whileHover={{ scale: 1.05 }} className="contact-submit-btn">
                 Submit
               </motion.button>

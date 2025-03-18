@@ -255,7 +255,9 @@ const Navbar = () => {
       transition={{ duration: 1.25, ease: "easeInOut", delay: 2 }}
       className={`navbar-main ${isMobile ? "h-auto" : ""}`}
     >
-      <div className="navbar-main">
+      <div className="navbar-main" style={{
+        color: "white"
+      }}>
         <div className="navbar-content">
           <ul className={`navbar-list ${isMobile ? "flex flex-row" : ""}`}>
             <motion.div

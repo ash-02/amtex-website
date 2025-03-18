@@ -64,6 +64,9 @@ const index = () => {
               transition={{ duration: 2, ease: "easeInOut", delay: 2 }}
               onClick={handleScroll}
               className="MainPage-button mt-4 px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:bg-cyan-300 transition-colors duration-300"
+              style={{
+                background: "#1a1a1a"
+              }}
             >
               Get Started
             </motion.button>
