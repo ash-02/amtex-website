@@ -166,6 +166,7 @@ const index = () => {
                 transition: { delay: 2.4, ...fadeIn.visible.transition },
               }}
               className="px-6 py-3 text-white font-semibold rounded-full shadow-md hover:bg-blue-600 transition"
+              style={{ background: "#1a1a1a" }}
             >
               Learn More
             </motion.button>

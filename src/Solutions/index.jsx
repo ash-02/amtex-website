@@ -76,6 +76,7 @@ const SectionPage = () => {
           </ul>
           <motion.button
             className="mt-6 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-gray-100 font-semibold rounded-lg shadow-lg transition-all"
+            style={{ background: "#1a1a1a" }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
